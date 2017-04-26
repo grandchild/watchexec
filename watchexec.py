@@ -16,7 +16,7 @@ args = parser.parse_args()
 
 
 
-notify_cmd = "inotifywait --quiet --recursive --event close_write,moved_to,create {dir} | while read -r directory events filename; do {cmd}; done".format(
+notify_cmd = "inotifywait --quiet --recursive --exclude '\\.git' --event close_write,moved_to,create {dir} | while read -r directory events filename; do {cmd}; done".format(
 	dir = path.abspath(path.join(".", args.path)) if not args.path.startswith("/") else args.path,
 	cmd = "; ".join([c.replace("%f", "${filename}") for c in args.commands]))
 
