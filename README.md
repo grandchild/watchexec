@@ -41,3 +41,10 @@ optional arguments:
                         ['.git', '.svn'])
   -d, --debug           Show debug info. (default: False)
 ```
+
+#### License
+
+[<img src='https://img.shields.io/badge/license-CC0-blue.svg'/>](https://creativecommons.org/publicdomain/zero/1.0)
+
+This is free software, and to the extent possible under law, all copyright and related or neighboring rights to this work are waived.
+You may use this code, or parts of it, freely and *without* attribution for any purpose.
