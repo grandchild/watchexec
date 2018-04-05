@@ -19,7 +19,8 @@ Install the ```inotify-tools``` package. It contains ```inotifywatch```.
 
 #### Usage
 ```
-usage: watchexec.py [-h] [-p PATH] [-o] [-d] [commands [commands ...]]
+usage: watchexec.py [-h] [-p PATH] [-o] [-i] [-I [DIR [DIR ...]]] [-d]
+                    [commands [commands ...]]
 
 Run command whenever files in the path change.
 
@@ -33,5 +34,10 @@ optional arguments:
   -p PATH, --path PATH  Directory or file to watch. (default: .)
   -o, --once            Run the task only on the first change. Then exit.
                         (default: False)
+  -i, --initial         Run the task once initially, regardless whether there
+                        are any changes. (default: False)
+  -I [DIR [DIR ...]], --ignore-dirs [DIR [DIR ...]]
+                        List of directories which are not watched. (default:
+                        ['.git', '.svn'])
   -d, --debug           Show debug info. (default: False)
 ```
