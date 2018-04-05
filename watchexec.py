@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# CC0 - free software.
+# To the extent possible under law, all copyright and related or neighboring
+# rights to this work are waived.
 import argparse
 import subprocess as proc
 import os.path as path
